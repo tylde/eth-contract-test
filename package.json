@@ -1,0 +1,19 @@
+{
+  "name": "eth-contract-test",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "git@github.com:tylde/eth-contract-test.git",
+  "author": "tylde <mr.mkalinowski@gmail.com>",
+  "workspaces": [
+    "client",
+    "ethereum"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1"
+  }
+}

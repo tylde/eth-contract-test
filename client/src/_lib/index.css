@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html ::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+html ::-webkit-scrollbar-track {
+  background: var(--color-background-primary);
+  border-left: 1px solid var(--color-background-secondary);
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.4rem;
+  font-family: Roboto Mono, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: Roboto Mono, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+code {
+  font-family: Roboto Mono, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+p, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  --color-background-primary: #eceff1;
+  --color-background-secondary: #fff;
+
+  --color-scrollbar-thumb: #999;
+  --color-scrollbar-hover: #777;
+
+  /*--color-font-color: #2c3e50;*/
+  --color-sidebar: rgb(17, 27, 84);
+  --color-border: #eee;
+  --color-border-input: #8791a5;
+  --color-shadow: rgba(66, 68, 90, 0.1);
+
+  --color-primary-RGB: 90, 130, 250;
+  --color-primary: rgb(90, 130, 250);
+  --color-primary-5: rgba(var(--color-primary-RGB), 0.05);
+  --color-primary-10: rgba(var(--color-primary-RGB), 0.1);
+  --color-primary-20: rgba(var(--color-primary-RGB), 0.2);
+  --color-primary-30: rgba(var(--color-primary-RGB), 0.3);
+  --color-primary-dark: rgb(80, 115, 235);
+
+  --color-danger-RGB: 250, 90, 90;
+  --color-danger: rgb(250, 90, 90);
+  --color-danger-10: rgba(var(--color-danger-RGB), 0.1);
+  --color-danger-20: rgba(var(--color-danger-RGB), 0.2);
+  --color-danger-30: rgba(var(--color-danger-RGB), 0.3);
+  --color-danger-dark: rgb(240, 75, 75);
+
+  --color-white: rgb(255, 255, 255);
+
+  --color-font-primary: rgb(90, 130, 250);
+  --color-font-danger: rgb(236, 0, 0);
+  --color-font-secondary: rgb(66, 68, 90);
+  --color-font-tertiary: rgb(145, 155, 175);
+  /*--color-font-primary: rgb(6, 16, 76);*/
+
+  --border-radius: 4px;
+  --border-radius-button: 4px;
+  --border-radius-input: 4px;
+
+  --micro-font-size: 0.8rem;
+  --very-small-font-size: 1.0rem;
+  --small-font-size: 1.2rem;
+  --regular-font-size: 1.4rem;
+  --medium-font-size: 1.6rem;
+  --big-font-size: 2.0rem;
+
+  --h1-font-size: 28px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+}
