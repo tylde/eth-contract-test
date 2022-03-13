@@ -3,3 +3,8 @@ package.json
 package-lock.json
 yarn.lock
 */**/dist
+
+artifacts
+cache
+coverage*
+gasReporterOutput.json
