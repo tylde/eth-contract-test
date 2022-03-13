@@ -8,12 +8,21 @@ type State = { isLoading?: boolean; isDisabled?: boolean };
 
 type ButtonType = { buttonType?: 'primary' | 'secondary' | 'danger' | 'flat' };
 
-type ButtonProps = React.ComponentPropsWithRef<typeof Wrapper> & WithMargins & ButtonType & State;
+type Style = { width?: string; height?: string };
+
+type ButtonProps = React.ComponentPropsWithRef<typeof Wrapper> & WithMargins & ButtonType & State & Style;
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, isLoading, isDisabled, buttonType = 'primary', ...restProps }, ref) => {
+  ({ children, isLoading, isDisabled, buttonType = 'primary', width, height, ...restProps }, ref) => {
     return (
-      <Wrapper disabled={isLoading || isDisabled} buttonType={buttonType} {...restProps} ref={ref}>
+      <Wrapper
+        disabled={isLoading || isDisabled}
+        buttonType={buttonType}
+        {...restProps}
+        ref={ref}
+        $width={width}
+        $height={height}
+      >
         {isLoading && (
           <LoadingWrapper>
             <LoadingIcon />
@@ -94,7 +103,7 @@ const buttonType = css<ButtonType>`
   ${(props) => props.buttonType === 'flat' && stylesFlat}
 `;
 
-const Wrapper = styled.button<WithMargins & ButtonType & State>`
+const Wrapper = styled.button<WithMargins & ButtonType & State & { $width?: string; $height?: string }>`
   position: relative;
   display: inline-block;
 
@@ -102,6 +111,8 @@ const Wrapper = styled.button<WithMargins & ButtonType & State>`
   cursor: pointer;
   user-select: none;
 
+  width: ${(props) => props.$width || 'max-content'};
+  height: ${(props) => props.$height || 'auto'};
   padding: 10px 24px;
 
   ${margins};

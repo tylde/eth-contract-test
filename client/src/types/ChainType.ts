@@ -4,6 +4,7 @@ export enum ChainType {
   Rinkeby = '0x4',
   Goerli = '0x5',
   Kovan = '0x2a',
+  Localhost = '0x7a69',
   Unknown = '0x0',
 }
 
@@ -19,6 +20,8 @@ export function getNetworkName(chainType?: ChainType): string {
       return 'Goerli';
     case ChainType.Kovan:
       return 'Kovan';
+    case ChainType.Localhost:
+      return 'Localhost';
     case ChainType.Unknown:
       return 'Unknown';
     default:

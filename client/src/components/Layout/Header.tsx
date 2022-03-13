@@ -7,10 +7,10 @@ export function Header({ children }: React.ComponentPropsWithoutRef<typeof Wrapp
 
 const Wrapper = styled.header`
   width: 100%;
-  height: 80px;
-  padding: 0 24px;
+  height: 60px;
+  min-height: 60px;
   background-color: var(--color-sidebar);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;

@@ -7,6 +7,7 @@ export function Card({ children, ...props }: React.ComponentPropsWithoutRef<type
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
   border-radius: 4px;
   background-color: var(--color-white);
   box-shadow: 0 4px 8px 0 var(--color-shadow);
