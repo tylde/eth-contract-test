@@ -7,7 +7,14 @@
     "test": "hardhat test",
     "clean": "hardhat clean",
     "compile": "hardhat compile",
-    "deploy:local": "hardhat run scripts/deploy-local.ts --network localhost"
+    "deploy:local": "hardhat run scripts/deploy-local.ts --network localhost",
+    "---": "---",
+    "rinkeby": "hardhat run scripts/deploy-local.ts --network rinkeby",
+    "verify:rinkeby:fiat": "npx hardhat verify --network rinkeby 0xC264F82e781c619Bc45773BE4190fc781E9E405C",
+    "verify:rinkeby:wrapped": "npx hardhat verify --network rinkeby 0xf25a8B2E62271039603a8Ce3304286D7D5b2e197 \"0xC264F82e781c619Bc45773BE4190fc781E9E405C\"",
+    "ropsten": "hardhat run scripts/deploy-local.ts --network ropsten",
+    "verify:ropsten:fiat": "npx hardhat verify --network ropsten 0x3903ff4b070776418032bEF0f21275fff1CfE08A",
+    "verify:ropsten:wrapped": "npx hardhat verify --network ropsten 0x878563199B8E319B24B85df1be7412353AeA14C7 \"0x3903ff4b070776418032bEF0f21275fff1CfE08A\""
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",

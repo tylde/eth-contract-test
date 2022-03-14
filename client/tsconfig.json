@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "lib": ["esnext", "dom", "dom.iterable"],
     "allowJs": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -20,7 +20,7 @@
       "src/*": ["./src/*"]
     },
     "outDir": "dist",
-    "downlevelIteration": true,
+    "downlevelIteration": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -10,6 +10,7 @@ import { DepositCard } from 'src/components/cards/DepositCard';
 import { NetworkCard } from 'src/components/cards/NetworkCard';
 import { PortfolioCard } from 'src/components/cards/PortfolioCard';
 import { RequestTokensCard } from 'src/components/cards/RequestTokensCard';
+import { SeeContractCard } from 'src/components/cards/SeeContractCard';
 import { WithdrawCard } from 'src/components/cards/WithdrawCard';
 import { useEthereum } from 'src/context/ethereum/EthereumProvider';
 
@@ -30,12 +31,13 @@ export function Home() {
             <ConnectionCard />
             <NetworkCard />
             {isMetamask && !isValidNetwork && <ChangeNetworkCard />}
-            {isConnected && isValidNetwork && (
+            {isMetamask && isConnected && isValidNetwork && (
               <>
                 <PortfolioCard />
                 <RequestTokensCard />
                 <DepositCard />
                 <WithdrawCard />
+                <SeeContractCard />
               </>
             )}
           </Grid>
